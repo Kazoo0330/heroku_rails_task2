@@ -1,0 +1,19 @@
+<h3>いいのか？？</h3>
+
+<%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
+  <%= form.hidden_field :title %>
+  <%= form.hidden_field :content %>
+  
+  <p>だいめい:<%= @blog.title %></p>
+  <p>なかみ:<%= @blog.content %></p>
+  <%= form.submit "登録しまっさ" %>
+<% end %>
+
+<%= form_with(model: @blog, url: new_blog_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :title %> 
+  <%= form.hidden_field :content %>
+  <%= form.submit "戻んの？" %>
+
+
+<% end %>
+
